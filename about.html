@@ -10,6 +10,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Inizio personalizzazione per foto ingrandita -->
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr; /* Aumentata la larghezza dedicata alla foto */
+    gap: 3rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .about-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Proporzione classica da ritratto */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .about-photo img {
+      max-width: 100%;
+      aspect-ratio: 1 / 1; /* Su mobile torna quadrata per occupare meno spazio in altezza */
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -81,11 +113,11 @@
         </div>
         <div>
           <dt>Web development</dt>
-        <div>
           <dd>HTML/CSS (basic)</dd>
+        </div>
+        <div>
           <dt>Language</dt>
           <dd>Italian, English (livello da mettere quando sono forte)</dd>
-        </div>
         </div>
       </dl>
     </div>
